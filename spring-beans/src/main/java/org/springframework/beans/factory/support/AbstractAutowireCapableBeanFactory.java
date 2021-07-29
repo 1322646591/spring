@@ -1869,8 +1869,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 			/**
 			 * 循环调用BeanPostProcessors后处理器的postProcessAfterInitialization方法,如果开启了spring aop动态代理,那
 			 * 么spring会在启动之初帮我们创建一个后处理器,在此处调用这个后处理器的postProcessAfterInitialization方法,就会
-			 * 判断哪些bean需要被代理,便在此处创建代理对象并返回(注解方式aop是在这里创建代理对象,配置文件的暂时没看,以后有看到再
-			 * 做分析)
+			 * 判断哪些bean需要被代理,便在此处创建代理对象并返回
 			 */
 			wrappedBean = applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName);
 		}
